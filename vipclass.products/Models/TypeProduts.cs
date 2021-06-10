@@ -1,6 +1,16 @@
-public class TypeProduts
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace vipclass.products.Models
 {
-    public int IdTypeProduct { get; set; }
-    public int IdProduct { get; set; }
-    public string Description { get; set; }
+    [Table("TypeProduts")]
+    public class TypeProduts
+    {
+        [Key]
+        public int Id { get; set; }
+        [Key]
+        public int IdProduct { get; set; }
+        [Required(ErrorMessage = "Required field")]
+        public string Description { get; set; }
+    }
 }

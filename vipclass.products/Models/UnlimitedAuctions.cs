@@ -1,5 +1,13 @@
-public class UnlimitedAuctions
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace vipclass.products.Models
 {
-    public int IdUnlimitedAuction { get; set; }
-    public int IdProduct { get; set; }
+    [Table("UnlimitedAuctions")]
+    public class UnlimitedAuctions
+    {
+        [Key]
+        public int Id { get; set; }
+        public int IdProduct { get; set; }
+    }
 }

@@ -1,6 +1,15 @@
-public class AccessKeys
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace vipclass.products.Models
 {
-    public int IdAccessKeys { get; set; }
-    public int IdProduct { get; set; }
-    public string Key { get; set; }
+    [Table("AccessKeys")]
+    public class AccessKeys
+    {
+        [Key]
+        public int Id { get; set; }
+        [Key]
+        public int IdProduct { get; set; }
+        public string Key { get; set; }
+    }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e2y41SSM6Q9LmMJvCrndzxsFdyJygpfXhYafC9Cs5N/PrJe4V+xAVwfyzKNVuDLszOc+HKUB8aPvEclNNC8mwg==",
+  "dgSpecHash": "EaC4n6bf/SqWROy+hQKv/vvl+bodxwljdIfps0zgEhmiiZGwkC/0pfo543fsUGrAK1uaTA5cCaKCV0qgAKnMIQ==",
   "success": true,
-  "projectFilePath": "/Users/jonatansouza/Desktop/Projetos/vipclass.products/vipclass.products/vipclass.products.csproj",
+  "projectFilePath": "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/vipclass.products.csproj",
   "expectedPackageFiles": [
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/jonatansouza/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",

@@ -1,8 +1,17 @@
-public class FileProducts
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace vipclass.products.Models
 {
-    public int IdFileProduct { get; set; }
-    public int IdProduct { get; set; }
-    public string Url { get; set; }
-    public string Hash { get; set; }
-    public bool Active { get; set; }
+    [Table("FileProducts")]
+    public class FileProducts
+    {
+        [Key]
+        public int Id { get; set; }
+        [Key]
+        public int IdProduct { get; set; }
+        public string Url { get; set; }
+        public string Hash { get; set; }
+        public bool Active { get; set; }
+    }
 }

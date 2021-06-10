@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonatansouza/Desktop/Projetos/vipclass.products/vipclass.products/vipclass.products.csproj": {}
+    "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/vipclass.products.csproj": {}
   },
   "projects": {
-    "/Users/jonatansouza/Desktop/Projetos/vipclass.products/vipclass.products/vipclass.products.csproj": {
+    "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/vipclass.products.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonatansouza/Desktop/Projetos/vipclass.products/vipclass.products/vipclass.products.csproj",
+        "projectUniqueName": "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/vipclass.products.csproj",
         "projectName": "vipclass.products",
-        "projectPath": "/Users/jonatansouza/Desktop/Projetos/vipclass.products/vipclass.products/vipclass.products.csproj",
+        "projectPath": "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/vipclass.products.csproj",
         "packagesPath": "/Users/jonatansouza/.nuget/packages/",
-        "outputPath": "/Users/jonatansouza/Desktop/Projetos/vipclass.products/vipclass.products/obj/",
+        "outputPath": "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jonatansouza/.nuget/NuGet/NuGet.Config"
