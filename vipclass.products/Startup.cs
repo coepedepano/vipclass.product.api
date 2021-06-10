@@ -9,6 +9,7 @@ namespace vipclass.products
 {
     public class Startup
     {
+        readonly string allowSpecificOrigins = "_allowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -18,12 +19,20 @@ namespace vipclass.products
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {        
             services.AddControllers();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "vipclass - products", Version = "v1" });
+            }).AddCors(options => {
+                options.AddPolicy(allowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("https://localhost:44374/", "http://localhost:4200/")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                });
+
             });
         }
 
@@ -40,6 +49,9 @@ namespace vipclass.products
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(allowSpecificOrigins);
+            app.UseCors(option => option.AllowAnyOrigin()); ;
 
             app.UseEndpoints(endpoints =>
             {
