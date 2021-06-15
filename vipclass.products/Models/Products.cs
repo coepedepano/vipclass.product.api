@@ -15,5 +15,6 @@ namespace vipclass.products.Models
         public decimal Royalts { get; set; }
         public bool PutOnMarketPlace { get; set; }
         public int Active { get; set; }
+        public TypeProduts TypeProduts { get; set; }
     }
 }

@@ -8,15 +8,15 @@ using vipclass.products.Models;
 namespace vipclass.products.Controllers
 {
     [ApiController]
-    [Route("v1/fixedprice")]
-    public class FixedPriceController : ControllerBase
+    [Route("v1/timedauctions")]
+    public class TimedAuctionsController : ControllerBase
     {
         [HttpGet]
         [Route("get")]
-        public async Task<ActionResult<List<FixedPrice>>> Get([FromServices] DataContext context)
+        public async Task<ActionResult<List<TimedAuctions>>> Get([FromServices] DataContext context)
         {
-            var fixedPrice = await context.FixedPrice.ToListAsync();
-            return fixedPrice;
+            var timeAuctions = await context.TimedAuctions.ToListAsync();
+            return timeAuctions;
         }
     }
 }

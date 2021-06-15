@@ -1,37 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using vipclass.products.Data;
+using vipclass.products.Models;
 
 namespace vipclass.products.Controllers
 {
     [ApiController]
-    [Route("fileproducts")]
+    [Route("v1/fileproducts")]
     public class FileProductsController : ControllerBase
     {
         [HttpGet]
         [Route("get")]
-        public string Get()
+        public async Task<ActionResult<List<FileProducts>>> Get([FromServices] DataContext context)
         {
-            return "O Zago é gay";
-        }
-
-        [HttpPost]
-        [Route("add")]
-        public string Add()
-        {
-            return "O Zago é gay";
-        }
-
-        [HttpPut]
-        [Route("put")]
-        public string Incluir()
-        {
-            return "O Zago é gay";
-        }
-
-        [HttpDelete]
-        [Route("delete")]
-        public string Delete()
-        {
-            return "O Zago é gay";
+            var fileProducts = await context.FileProducts.ToListAsync();
+            return fileProducts;
         }
     }
 }

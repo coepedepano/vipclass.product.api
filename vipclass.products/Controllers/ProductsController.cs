@@ -1,37 +1,46 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using vipclass.products.Data;
+using vipclass.products.Models;
 
 namespace vipclass.products.Controllers
 {
     [ApiController]
-    [Route("products")]
+    [Route("v1/products")]
     public class ProductsController : ControllerBase
     {
         [HttpGet]
         [Route("get")]
-        public string Get()
+        public async Task<ActionResult<List<Products>>> Get([FromServices] DataContext context)
         {
-            return "O Zago é gay";
+            var products = await context.Products.ToListAsync();
+            return products;
         }
 
-        [HttpPost]
-        [Route("add")]
-        public string Add()
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Products>> GetById([FromServices] DataContext context, int id)
         {
-            return "O Zago é gay";
+            var product = await context.Products
+            .Include(x => x.TypeProduts)
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Id == id);
+            return product;
         }
 
-        [HttpPut]
-        [Route("put")]
-        public string Incluir()
+        [HttpGet]
+        [Route("categories/{id:int}")]
+        public async Task<ActionResult<Products>> GetByTypeProduct([FromServices] DataContext context, int id)
         {
-            return "O Zago é gay";
-        }
-
-        [HttpDelete]
-        [Route("delete")]
-        public string Delete()
-        {
-            return "O Zago é gay";
+            var product = await context.Products
+            .Include(x => x.TypeProduts)
+            .AsNoTracking()
+            .Where(x => x.TypeProduts.Id == id)
+            .FirstOrDefaultAsync(x => x.Id == id);
+            return product;
         }
     }
 }

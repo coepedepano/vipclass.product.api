@@ -1,37 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using vipclass.products.Data;
+using vipclass.products.Models;
 
 namespace vipclass.products.Controllers
 {
     [ApiController]
-    [Route("accesskeys")]
+    [Route("v1/accesskeys")]
     public class AccessKeysController : ControllerBase
     {
         [HttpGet]
-        [Route("get")]
-        public string Get()
+        [Route("")]
+        public async Task<ActionResult<List<AccessKeys>>> Get([FromServices] DataContext context)
         {
-            return "O Zago é gay";
+            var accessKeys = await context.AccessKeys.ToListAsync();
+            return accessKeys;
         }
 
         [HttpPost]
-        [Route("add")]
-        public string Add()
+        [Route("")]
+        public async Task<ActionResult<AccessKeys>> Post(
+            [FromServices] DataContext context,
+            [FromBody] AccessKeys model)
         {
-            return "O Zago é gay";
-        }
-
-        [HttpPut]
-        [Route("put")]
-        public string Incluir()
-        {
-            return "O Zago é gay";
-        }
-
-        [HttpDelete]
-        [Route("delete")]
-        public string Delete()
-        {
-            return "O Zago é gay";
+            if (ModelState.IsValid)
+            {
+                context.AccessKeys.Add(model);
+                await context.SaveChangesAsync();
+                return model;
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
         }
     }
 }

@@ -50,6 +50,7 @@
 /Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.dll
 /Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.pdb
 /Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\vipclass.product.api\vipclass.products\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\vipclass.product.api\vipclass.products\bin\Debug\netcoreapp3.1\appsettings.json
 C:\vipclass.product.api\vipclass.products\bin\Debug\netcoreapp3.1\vipclass.products.exe
@@ -77,3 +78,19 @@ C:\vipclass.product.api\vipclass.products\obj\Debug\netcoreapp3.1\vipclass.produ
 C:\vipclass.product.api\vipclass.products\obj\Debug\netcoreapp3.1\vipclass.products.dll
 C:\vipclass.product.api\vipclass.products\obj\Debug\netcoreapp3.1\vipclass.products.pdb
 C:\vipclass.product.api\vipclass.products\obj\Debug\netcoreapp3.1\vipclass.products.genruntimeconfig.cache
+=======
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+>>>>>>> 8322bfa... Inclusão do Entity Framework
