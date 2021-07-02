@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "vipclass.products"
+		}
+	],
+	"settings": {
+		"DockerRun.DisableDockerrc": true,
+		"DockerRun.Containers": [
+			"dc85f4836b66"
+		]
+	}
+}

@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using vipclass.products.Data;
-using vipclass.products.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace vipclass.products.Controllers
 {
@@ -11,12 +6,6 @@ namespace vipclass.products.Controllers
     [Route("v1/fileproducts")]
     public class FileProductsController : ControllerBase
     {
-        [HttpGet]
-        [Route("get")]
-        public async Task<ActionResult<List<FileProducts>>> Get([FromServices] DataContext context)
-        {
-            var fileProducts = await context.FileProducts.ToListAsync();
-            return fileProducts;
-        }
+
     }
 }

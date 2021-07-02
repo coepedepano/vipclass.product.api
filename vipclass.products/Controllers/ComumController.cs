@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using vipclass.products.Models;
+using vipclass.products.Domain.Models;
 
 namespace vipclass.products.Controllers
 {

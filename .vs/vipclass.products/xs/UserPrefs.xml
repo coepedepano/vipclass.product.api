@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{8C238B3A-59BB-479A-8C98-324D65386149}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/appsettings.json">
+    <Files>
+      <File FileName="vipclass.products/appsettings.json" Line="11" Column="24" />
+      <File FileName="vipclass.products/Repository/SensorRepository.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="vipclass.products" expanded="True">
+            <Node name="vipclass.products" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Domain" expanded="True">
+                <Node name="Models" expanded="True" />
+              </Node>
+              <Node name="Repository" expanded="True">
+                <Node name="Interface" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.vipclass.products PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
