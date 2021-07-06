@@ -38,19 +38,43 @@ namespace vipclass.products.Repository
             return result;
         }
 
-        public Task<Products> Get(int id)
+        public async Task<Products> Get(int id)
         {
-            throw new System.NotImplementedException();
+            using var connection = new SqlConnection(_connectionString);
+
+            var data = await connection.QueryFirstAsync<Products>("SELECT Title, Description, Royalts, PutOnMarketPlace, Active " +
+                                                                    "FROM Products " +
+                                                                    "WHERE Id = @Id", id);
+
+            return data;
         }
 
-        public Task<int> Update(Products entity)
+        public async Task<int> Update(Products entity)
         {
-            throw new System.NotImplementedException();
+            using var connection = new SqlConnection(_connectionString);
+
+            var query = "UPDATE Products " +
+                        "SET Title = @Title, " +
+                        "Description = @Description " +
+                        "Royalts = @Royalts " +
+                        "PutOnMarketPlace = @PutOnMarketPlace " +
+                        "WHERE Id = @Id";
+
+            var result = await connection.ExecuteAsync(query, entity);
+
+            return result;
         }
 
-        public Task<int> Delete(int id)
+        public async Task<int> Delete(int id)
         {
-            throw new System.NotImplementedException();
+            using var connection = new SqlConnection(_connectionString);
+
+            var query = "DELETE Products " +
+                        "WHERE Id = @Id";
+
+            var result = await connection.ExecuteAsync(query, id);
+
+            return result;
         }
     }
 }

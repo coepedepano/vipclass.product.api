@@ -7,17 +7,17 @@ using vipclass.products.Repository.Interface;
 
 namespace vipclass.products.Controllers
 {
-    [Route("v1/products")]
+    [Route("v1/categories")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
-        private readonly ILogger<ProductsController> _logger;
-        private readonly IProductsRepository _productsRepository;
+        private readonly ILogger<CategoriesController> _logger;
+        private readonly ICategoriesRepository _categoriesRepository;
 
-        public ProductsController(ILogger<ProductsController> logger, IProductsRepository productsRepository)
+        public CategoriesController(ILogger<CategoriesController> logger, ICategoriesRepository categoriesRepository)
         {
             _logger = logger;
-            _productsRepository = productsRepository;
+            _categoriesRepository = categoriesRepository;
         }
 
         [Route("GetAll")]
@@ -26,7 +26,7 @@ namespace vipclass.products.Controllers
         {
             try
             {
-                var data = await _productsRepository.GetAll();
+                var data = await _categoriesRepository.GetAll();
 
                 return Ok(data);
             }
@@ -39,11 +39,11 @@ namespace vipclass.products.Controllers
 
         [Route("Add")]
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Products parameters)
+        public async Task<IActionResult> Add([FromBody] Categories parameters)
         {
             try
             {
-                var result = await _productsRepository.Add(parameters);
+                var result = await _categoriesRepository.Add(parameters);
 
                 return Ok();
             }

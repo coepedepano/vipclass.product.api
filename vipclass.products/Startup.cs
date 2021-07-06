@@ -24,6 +24,7 @@ namespace vipclass.products
         {
             #region Injeção de Dependência
             services.AddSingleton<IProductsRepository, ProductsRepository>();
+            services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
             #endregion
 
             services.AddMvcCore();

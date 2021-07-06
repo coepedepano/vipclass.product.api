@@ -4,6 +4,5 @@ namespace vipclass.products.Repository.Interface
 {
     public interface IProductsRepository : IGenericRepository<Products>
     {
-
     }
 }
