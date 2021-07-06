@@ -24,11 +24,13 @@
     <None Remove="System.Data.SqlClient" />
     <None Remove="Dapper" />
     <None Remove="Domain\Models\" />
+    <None Remove="Domain\Models\Signature\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
     <Folder Include="Repository\" />
     <Folder Include="Repository\Interface\" />
     <Folder Include="Domain\Models\" />
+    <Folder Include="Domain\Models\Signature\" />
   </ItemGroup>
 </Project>

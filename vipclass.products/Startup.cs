@@ -23,7 +23,7 @@ namespace vipclass.products
         public void ConfigureServices(IServiceCollection services)
         {
             #region Injeção de Dependência
-            services.AddSingleton<ISensorRepository, SensorRepository>();
+            services.AddSingleton<IProductsRepository, ProductsRepository>();
             #endregion
 
             services.AddMvcCore();
