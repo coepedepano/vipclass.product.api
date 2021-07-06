@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{8C238B3A-59BB-479A-8C98-324D65386149}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Repository/CategoriesRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Repository/ProductsRepository.cs">
     <Files>
       <File FileName="vipclass.products/Controllers/TypesProductsController.cs" Line="34" Column="14" />
-      <File FileName="vipclass.products/Controllers/ProductsController.cs" Line="1" Column="1" />
-      <File FileName="vipclass.products/Repository/CategoriesRepository.cs" Line="33" Column="61" />
+      <File FileName="vipclass.products/Controllers/ProductsController.cs" Line="80" Column="69" />
+      <File FileName="vipclass.products/Repository/CategoriesRepository.cs" Line="22" Column="46" />
+      <File FileName="vipclass.products/Repository/ProductsRepository.cs" Line="52" Column="42" />
+      <File FileName="vipclass.products/Domain/Models/Products.cs" Line="7" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,7 +23,7 @@
               </Node>
               <Node name="Repository" expanded="True">
                 <Node name="Interface" expanded="True" />
-                <Node name="CategoriesRepository.cs" selected="True" />
+                <Node name="ProductsRepository.cs" selected="True" />
               </Node>
             </Node>
           </Node>

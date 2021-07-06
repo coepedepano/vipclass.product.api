@@ -26,14 +26,14 @@ namespace vipclass.products.Repository
             return data;
         }
 
-        public async Task<int> Add(Products parameters)
+        public async Task<int> Add(Products entity)
         {
             using var connection = new SqlConnection(_connectionString);
 
             var query = "INSERT INTO Products (IdCategories, Title, Description, Royalts, PutOnMarketPlace, Active) " +
                         "VALUES (@IdCategories, @Title, @Description, @Royalts, @PutOnMarketPlace, @Active)";
 
-            var result = await connection.ExecuteAsync(query, parameters);
+            var result = await connection.ExecuteAsync(query, entity);
 
             return result;
         }
@@ -44,7 +44,7 @@ namespace vipclass.products.Repository
 
             var data = await connection.QueryFirstAsync<Products>("SELECT Title, Description, Royalts, PutOnMarketPlace, Active " +
                                                                     "FROM Products " +
-                                                                    "WHERE Id = @Id", id);
+                                                                    "WHERE Id = @Id", new { Id = id });
 
             return data;
         }
@@ -55,8 +55,8 @@ namespace vipclass.products.Repository
 
             var query = "UPDATE Products " +
                         "SET Title = @Title, " +
-                        "Description = @Description " +
-                        "Royalts = @Royalts " +
+                        "Description = @Description, " +
+                        "Royalts = @Royalts, " +
                         "PutOnMarketPlace = @PutOnMarketPlace " +
                         "WHERE Id = @Id";
 
@@ -69,10 +69,10 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var query = "DELETE Products " +
+            var query = "DELETE FROM Products " +
                         "WHERE Id = @Id";
 
-            var result = await connection.ExecuteAsync(query, id);
+            var result = await connection.ExecuteAsync(query, new { Id = id });
 
             return result;
         }
