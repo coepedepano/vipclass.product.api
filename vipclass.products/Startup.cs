@@ -4,8 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using vipclass.products.Repository;
-using vipclass.products.Repository.Interface;
+using vipclass.products.Infrastructure;
 
 namespace vipclass.products
 {
@@ -22,11 +21,7 @@ namespace vipclass.products
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region Injeção de Dependência
-            services.AddSingleton<IProductsRepository, ProductsRepository>();
-            services.AddSingleton<ICategoriesRepository, CategoriesRepository>();
-            #endregion
-
+            services.AddInfrastructure();
             services.AddMvcCore();
             services.AddControllers();
             services.AddSwaggerGen(c =>

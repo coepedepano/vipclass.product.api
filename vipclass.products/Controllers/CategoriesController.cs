@@ -20,6 +20,23 @@ namespace vipclass.products.Controllers
             _categoriesRepository = categoriesRepository;
         }
 
+        [Route("Get")]
+        [HttpGet]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+                var data = await _categoriesRepository.Get(id);
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error to get data");
+                return new StatusCodeResult(500);
+            }
+        }
+
         [Route("GetAll")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -44,6 +61,40 @@ namespace vipclass.products.Controllers
             try
             {
                 var result = await _categoriesRepository.Add(parameters);
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error to set data");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        [Route("Update")]
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] Categories entity)
+        {
+            try
+            {
+                var result = await _categoriesRepository.Update(entity);
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error to set data");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        [Route("Delete")]
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromBody] int id)
+        {
+            try
+            {
+                var result = await _categoriesRepository.Delete(id);
 
                 return Ok();
             }

@@ -13,6 +13,7 @@
     <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Serilog" />
@@ -25,6 +26,8 @@
     <None Remove="Dapper" />
     <None Remove="Domain\Models\" />
     <None Remove="Domain\Models\Signature\" />
+    <None Remove="Infrastructure\" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
@@ -32,5 +35,6 @@
     <Folder Include="Repository\Interface\" />
     <Folder Include="Domain\Models\" />
     <Folder Include="Domain\Models\Signature\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 </Project>

@@ -1,30 +1,17 @@
 ﻿<Properties StartupConfiguration="{8C238B3A-59BB-479A-8C98-324D65386149}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Repository/ProductsRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Infrastructure/DependencyInjection.cs">
     <Files>
-      <File FileName="vipclass.products/Controllers/TypesProductsController.cs" Line="34" Column="14" />
-      <File FileName="vipclass.products/Controllers/ProductsController.cs" Line="80" Column="69" />
-      <File FileName="vipclass.products/Repository/CategoriesRepository.cs" Line="22" Column="46" />
-      <File FileName="vipclass.products/Repository/ProductsRepository.cs" Line="52" Column="42" />
-      <File FileName="vipclass.products/Domain/Models/Products.cs" Line="7" Column="18" />
+      <File FileName="vipclass.products/Repository/CategoriesRepository.cs" Line="58" Column="40" />
+      <File FileName="vipclass.products/Repository/ProductsRepository.cs" />
+      <File FileName="vipclass.products/Domain/Models/Products.cs" />
+      <File FileName="vipclass.products/Infrastructure/DependencyInjection.cs" Line="14" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="vipclass.products" expanded="True">
-            <Node name="vipclass.products" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Domain" expanded="True">
-                <Node name="Models" expanded="True">
-                  <Node name="Signature" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Repository" expanded="True">
-                <Node name="Interface" expanded="True" />
-                <Node name="ProductsRepository.cs" selected="True" />
-              </Node>
+            <Node name="vipclass.products" expanded="True" selected="True">
+              <Node name="Infrastructure" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -109,3 +109,4 @@ C:/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.produ
 /Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.dll
 /Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.pdb
 /Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.genruntimeconfig.cache
+/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/obj/Debug/netcoreapp3.1/vipclass.products.csproj.AssemblyReference.cache

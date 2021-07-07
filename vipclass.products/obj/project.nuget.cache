@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A8mSAy8pbwJIgZDNnDj7Xi1g8SwhTHnvQZ7jf03NKAjyOIuM0SXeRim/38hBnRkU7ONAhqIOYW3a5ns3RFdJCg==",
+  "dgSpecHash": "7/IKTCtylziHJs1DpcDsfPvvzWtggEZJfBBIYZkV+3TraXW8oJ8LUVhkj38byOKSL7k79nQUl1hJ2pKck2OhXg==",
   "success": true,
   "projectFilePath": "/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/vipclass.products.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,8 @@
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.configuration/3.1.8/microsoft.extensions.configuration.3.1.8.nupkg.sha512",
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.8/microsoft.extensions.configuration.abstractions.3.1.8.nupkg.sha512",
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.configuration.binder/3.1.8/microsoft.extensions.configuration.binder.3.1.8.nupkg.sha512",
-    "/Users/jonatansouza/.nuget/packages/microsoft.extensions.dependencyinjection/3.1.8/microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
-    "/Users/jonatansouza/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.1.8/microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
+    "/Users/jonatansouza/.nuget/packages/microsoft.extensions.dependencyinjection/5.0.1/microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "/Users/jonatansouza/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/5.0.0/microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.dependencymodel/2.0.4/microsoft.extensions.dependencymodel.2.0.4.nupkg.sha512",
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.fileproviders.abstractions/3.1.8/microsoft.extensions.fileproviders.abstractions.3.1.8.nupkg.sha512",
     "/Users/jonatansouza/.nuget/packages/microsoft.extensions.hosting.abstractions/3.1.8/microsoft.extensions.hosting.abstractions.3.1.8.nupkg.sha512",
