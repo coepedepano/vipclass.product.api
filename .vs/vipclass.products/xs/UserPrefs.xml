@@ -1,17 +1,23 @@
 ﻿<Properties StartupConfiguration="{8C238B3A-59BB-479A-8C98-324D65386149}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Infrastructure/DependencyInjection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Repository/CoinsRepository.cs">
     <Files>
-      <File FileName="vipclass.products/Repository/CategoriesRepository.cs" Line="58" Column="40" />
-      <File FileName="vipclass.products/Repository/ProductsRepository.cs" />
-      <File FileName="vipclass.products/Domain/Models/Products.cs" />
-      <File FileName="vipclass.products/Infrastructure/DependencyInjection.cs" Line="14" Column="10" />
+      <File FileName="vipclass.products/Controllers/CoinsController.cs" Line="59" Column="39" />
+      <File FileName="vipclass.products/Repository/CoinsRepository.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="vipclass.products" expanded="True">
-            <Node name="vipclass.products" expanded="True" selected="True">
+            <Node name="vipclass.products" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Domain" expanded="True">
+                <Node name="Models" expanded="True" />
+              </Node>
               <Node name="Infrastructure" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="Interface" expanded="True" />
+                <Node name="CoinsRepository.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

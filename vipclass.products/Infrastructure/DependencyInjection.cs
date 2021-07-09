@@ -10,6 +10,7 @@ namespace vipclass.products.Infrastructure
         {
             services.AddTransient<IProductsRepository, ProductsRepository>();
             services.AddTransient<ICategoriesRepository, CategoriesRepository>();
+            services.AddTransient<ICoinsRepository, CoinsRepository>();
             return services;
         }
     }

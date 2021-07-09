@@ -8,52 +8,53 @@ using vipclass.products.Repository.Interface;
 
 namespace vipclass.products.Repository
 {
-    public sealed class CategoriesRepository : ICategoriesRepository
+    public sealed class CoinsRepository : ICoinsRepository
     {
         private readonly string _connectionString;
 
-        public CategoriesRepository(IConfiguration configuration)
+        public CoinsRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("VipClassDataServer");
         }
 
-        public async Task<IEnumerable<Categories>> GetAll()
+        public async Task<IEnumerable<Coins>> GetAll()
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryAsync<Categories>("SELECT Id, Description, Active FROM Categories");
+            var data = await connection.QueryAsync<Coins>("SELECT Id, Name, Description, Active FROM Coins");
 
             return data;
         }
 
-        public async Task<int> Add(Categories entity)
+        public async Task<int> Add(Coins entity)
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var query = "INSERT INTO Categories (Description, Active) " +
-                        "VALUES (@Description, @Active)";
+            var query = "INSERT INTO Coins (Name, Description, Active) " +
+                        "VALUES (@Name, @Description, @Active)";
 
             var result = await connection.ExecuteAsync(query, entity);
 
             return result;
         }
 
-        public async Task<Categories> Get(int id)
+        public async Task<Coins> Get(int id)
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryFirstOrDefaultAsync<Categories>("SELECT Id, Description, Active FROM Categories " +
-                                                                    "WHERE Id = @Id", new { Id = id });
+            var data = await connection.QueryFirstOrDefaultAsync<Coins>("SELECT Id, Name, Description, Active FROM Coins " +
+                                                                        "WHERE Id = @Id", new { Id = id });
 
             return data;
         }
 
-        public async Task<int> Update(Categories entity)
+        public async Task<int> Update(Coins entity)
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var query = "UPDATE Categories " +
-                        "SET Description = @Description, " +
+            var query = "UPDATE Coins " +
+                        "SET Name = @Name, " +
+                        "Description = @Description, " +
                         "Active = @Active " +
                         "WHERE Id = @Id";
 
@@ -66,7 +67,7 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var query = "DELETE Categories " +
+            var query = "DELETE Coins " +
                         "WHERE Id = @Id";
 
             var result = await connection.ExecuteAsync(query, new { Id = id });

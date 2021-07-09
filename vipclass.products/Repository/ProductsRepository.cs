@@ -42,7 +42,7 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryFirstAsync<Products>("SELECT Title, Description, Royalts, PutOnMarketPlace, Active " +
+            var data = await connection.QueryFirstOrDefaultAsync<Products>("SELECT Title, Description, Royalts, PutOnMarketPlace, Active " +
                                                                     "FROM Products " +
                                                                     "WHERE Id = @Id", new { Id = id });
 
