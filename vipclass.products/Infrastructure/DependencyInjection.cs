@@ -8,7 +8,7 @@ namespace vipclass.products.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-            services.AddTransient<IProductsRepository, ProductsRepository>();
+            services.AddTransient<ICoursesRepository, CoursesRepository>();
             services.AddTransient<ICategoriesRepository, CategoriesRepository>();
             services.AddTransient<ICoinsRepository, CoinsRepository>();
             return services;

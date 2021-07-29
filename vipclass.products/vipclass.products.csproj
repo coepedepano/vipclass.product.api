@@ -14,6 +14,7 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="Dapper" Version="2.0.90" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Serilog" />
@@ -28,6 +29,9 @@
     <None Remove="Domain\Models\Signature\" />
     <None Remove="Infrastructure\" />
     <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="AutoMapper" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
@@ -36,5 +40,7 @@
     <Folder Include="Domain\Models\" />
     <Folder Include="Domain\Models\Signature\" />
     <Folder Include="Infrastructure\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interface\" />
   </ItemGroup>
 </Project>

@@ -21,7 +21,7 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryAsync<Coins>("SELECT Id, Name, Description, Active FROM Coins");
+            var data = await connection.QueryAsync<Coins>("SELECT IdCoin, Name, Description, Active FROM Coins");
 
             return data;
         }
@@ -42,8 +42,8 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryFirstOrDefaultAsync<Coins>("SELECT Id, Name, Description, Active FROM Coins " +
-                                                                        "WHERE Id = @Id", new { Id = id });
+            var data = await connection.QueryFirstOrDefaultAsync<Coins>("SELECT IdCoin, Name, Description, Active FROM Coins " +
+                                                                        "WHERE IdCoin = @Id", new { Id = id });
 
             return data;
         }
@@ -56,7 +56,7 @@ namespace vipclass.products.Repository
                         "SET Name = @Name, " +
                         "Description = @Description, " +
                         "Active = @Active " +
-                        "WHERE Id = @Id";
+                        "WHERE IdCoin = @Id";
 
             var result = await connection.ExecuteAsync(query, entity);
 
@@ -68,7 +68,7 @@ namespace vipclass.products.Repository
             using var connection = new SqlConnection(_connectionString);
 
             var query = "DELETE Coins " +
-                        "WHERE Id = @Id";
+                        "WHERE IdCoin = @Id";
 
             var result = await connection.ExecuteAsync(query, new { Id = id });
 

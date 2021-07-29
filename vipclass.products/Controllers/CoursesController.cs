@@ -3,21 +3,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using vipclass.products.Domain.Models;
+using vipclass.products.Domain.Models.Signature;
 using vipclass.products.Repository.Interface;
+//using vipclass.products.Services.Interface;
 
 namespace vipclass.products.Controllers
 {
-    [Route("v1/products")]
+    [Route("v1/course")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class CoursesController : ControllerBase
     {
-        private readonly ILogger<ProductsController> _logger;
-        private readonly IProductsRepository _productsRepository;
+        private readonly ILogger<CoursesController> _logger;
+        private readonly ICoursesRepository _coursesRepository;
+        //private readonly ICourseServices _courseServices;
 
-        public ProductsController(ILogger<ProductsController> logger, IProductsRepository productsRepository)
+        public CoursesController(ILogger<CoursesController> logger, ICoursesRepository courseRepository)
         {
             _logger = logger;
-            _productsRepository = productsRepository;
+            _coursesRepository = courseRepository;
+            //_courseServices = courseServices;
         }
 
         [Route("Get")]
@@ -26,7 +30,7 @@ namespace vipclass.products.Controllers
         {
             try
             {
-                var data = await _productsRepository.Get(id);
+                var data = await _coursesRepository.Get(id);
 
                 return Ok(data);
             }
@@ -43,7 +47,7 @@ namespace vipclass.products.Controllers
         {
             try
             {
-                var data = await _productsRepository.GetAll();
+                var data = await _coursesRepository.GetAll();
 
                 return Ok(data);
             }
@@ -56,11 +60,11 @@ namespace vipclass.products.Controllers
 
         [Route("Add")]
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Products parameters)
+        public async Task<IActionResult> Add([FromBody] AddCourseSignature parameters)
         {
             try
             {
-                var result = await _productsRepository.Add(parameters);
+                await _coursesRepository.Save(parameters);
 
                 return Ok();
             }
@@ -73,11 +77,11 @@ namespace vipclass.products.Controllers
 
         [Route("Update")]
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] Products entity)
+        public async Task<IActionResult> Update([FromBody] Courses entity)
         {
             try
             {
-                var result = await _productsRepository.Update(entity);
+                var result = await _coursesRepository.Update(entity);
 
                 return Ok();
             }
@@ -94,7 +98,7 @@ namespace vipclass.products.Controllers
         {
             try
             {
-                var result = await _productsRepository.Delete(id);
+                var result = await _coursesRepository.Delete(id);
 
                 return Ok();
             }
