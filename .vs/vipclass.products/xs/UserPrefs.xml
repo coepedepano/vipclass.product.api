@@ -1,24 +1,20 @@
 ﻿<Properties StartupConfiguration="{8C238B3A-59BB-479A-8C98-324D65386149}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Repository/CoursesRepository.cs">
     <Files>
-      <File FileName="vipclass.products/Controllers/CoursesController.cs" Line="70" Column="14" />
-      <File FileName="vipclass.products/Infrastructure/DependencyInjection.cs" Line="13" Column="72" />
-      <File FileName="vipclass.products/Repository/CoursesRepository.cs" Line="80" Column="1" />
+      <File FileName="vipclass.products/Controllers/CoursesController.cs" Line="67" Column="1" />
+      <File FileName="vipclass.products/Infrastructure/DependencyInjection.cs" />
+      <File FileName="vipclass.products/Repository/CoursesRepository.cs" Line="81" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="vipclass.products" expanded="True">
             <Node name="vipclass.products" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Domain" expanded="True" />
-              <Node name="Infrastructure" expanded="True" />
-              <Node name="Repository" expanded="True">
-                <Node name="Interface" expanded="True" />
-                <Node name="CoursesRepository.cs" selected="True" />
+              <Node name="DataBase" expanded="True">
+                <Node name="DDL" expanded="True" />
               </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Interface" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="CoursesRepository.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -30,10 +26,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/Repository/CoursesRepository.cs" relfile="vipclass.products/Repository/CoursesRepository.cs" line="101" column="1" />
-      <Breakpoint file="/Users/jonatansouza/Desktop/Projetos/vipclass.product.api/vipclass.products/Repository/CoursesRepository.cs" relfile="vipclass.products/Repository/CoursesRepository.cs" line="79" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

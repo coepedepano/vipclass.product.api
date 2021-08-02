@@ -32,6 +32,8 @@
     <None Remove="Services\" />
     <None Remove="Services\Interfaces\" />
     <None Remove="AutoMapper" />
+    <None Remove="DataBase\" />
+    <None Remove="DataBase\DDL\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
@@ -42,5 +44,7 @@
     <Folder Include="Infrastructure\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Interface\" />
+    <Folder Include="DataBase\" />
+    <Folder Include="DataBase\DDL\" />
   </ItemGroup>
 </Project>
