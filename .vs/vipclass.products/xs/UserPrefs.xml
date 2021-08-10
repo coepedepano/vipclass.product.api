@@ -1,20 +1,26 @@
 ﻿<Properties StartupConfiguration="{8C238B3A-59BB-479A-8C98-324D65386149}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Repository/CoursesRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vipclass.products/Controllers/CoinsController.cs">
     <Files>
-      <File FileName="vipclass.products/Controllers/CoursesController.cs" Line="67" Column="1" />
-      <File FileName="vipclass.products/Infrastructure/DependencyInjection.cs" />
-      <File FileName="vipclass.products/Repository/CoursesRepository.cs" Line="81" Column="1" />
+      <File FileName="vipclass.products/Repository/CoinsRepository.cs" Line="12" Column="55" />
+      <File FileName="vipclass.products/Domain/Models/Signature/AddCoinsSignature.cs" Line="5" Column="35" />
+      <File FileName="vipclass.products/Repository/Interface/ICoinsRepository.cs" Line="9" Column="40" />
+      <File FileName="vipclass.products/Controllers/CoinsController.cs" Line="60" Column="74" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="vipclass.products" expanded="True">
             <Node name="vipclass.products" expanded="True">
-              <Node name="DataBase" expanded="True">
-                <Node name="DDL" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CoinsController.cs" selected="True" />
+              </Node>
+              <Node name="Domain" expanded="True">
+                <Node name="Models" expanded="True">
+                  <Node name="Signature" expanded="True" />
+                </Node>
               </Node>
               <Node name="Repository" expanded="True">
-                <Node name="CoursesRepository.cs" selected="True" />
+                <Node name="Interface" expanded="True" />
               </Node>
             </Node>
           </Node>

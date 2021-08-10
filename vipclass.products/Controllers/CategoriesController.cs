@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using vipclass.products.Domain.Models;
+using vipclass.products.Domain.Models.Signature;
 using vipclass.products.Repository.Interface;
 
 namespace vipclass.products.Controllers
@@ -56,7 +57,7 @@ namespace vipclass.products.Controllers
 
         [Route("Add")]
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] Categories parameters)
+        public async Task<IActionResult> Add([FromBody] AddCategoriesSignature parameters)
         {
             try
             {

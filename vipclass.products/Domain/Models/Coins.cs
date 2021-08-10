@@ -4,7 +4,7 @@ namespace vipclass.products.Domain.Models
 {
     public class Coins
     {
-        public int Id { get; set; }
+        public int IdCoin { get; set; }
         [Required(ErrorMessage = "Required field")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Required field")]

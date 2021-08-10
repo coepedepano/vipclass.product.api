@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using vipclass.products.Domain.Models;
+using vipclass.products.Domain.Models.Signature;
 using vipclass.products.Repository.Interface;
 
 namespace vipclass.products.Repository
@@ -21,9 +22,21 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryAsync<Categories>("SELECT Id, Description, Active FROM Categories");
+            var data = await connection.QueryAsync<Categories>("SELECT IdCategorie, Description, Active FROM Categories");
 
             return data;
+        }
+
+        public async Task<int> Add(AddCategoriesSignature entity)
+        {
+            using var connection = new SqlConnection(_connectionString);
+
+            var query = "INSERT INTO Categories (Description, Active) " +
+                        "VALUES (@Description, @Active)";
+
+            var result = await connection.ExecuteAsync(query, entity);
+
+            return result;
         }
 
         public async Task<int> Add(Categories entity)
@@ -42,8 +55,8 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryFirstOrDefaultAsync<Categories>("SELECT Id, Description, Active FROM Categories " +
-                                                                    "WHERE Id = @Id", new { Id = id });
+            var data = await connection.QueryFirstOrDefaultAsync<Categories>("SELECT IdCategorie, Description, Active FROM Categories " +
+                                                                    "WHERE IdCategorie = @Id", new { Id = id });
 
             return data;
         }
@@ -55,7 +68,7 @@ namespace vipclass.products.Repository
             var query = "UPDATE Categories " +
                         "SET Description = @Description, " +
                         "Active = @Active " +
-                        "WHERE Id = @Id";
+                        "WHERE IdCategorie = @Id";
 
             var result = await connection.ExecuteAsync(query, entity);
 
@@ -67,7 +80,7 @@ namespace vipclass.products.Repository
             using var connection = new SqlConnection(_connectionString);
 
             var query = "DELETE Categories " +
-                        "WHERE Id = @Id";
+                        "WHERE IdCategorie = @Id";
 
             var result = await connection.ExecuteAsync(query, new { Id = id });
 

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using vipclass.products.Domain.Models;
+using vipclass.products.Domain.Models.Signature;
 using vipclass.products.Repository.Interface;
 
 namespace vipclass.products.Repository
@@ -24,6 +25,18 @@ namespace vipclass.products.Repository
             var data = await connection.QueryAsync<Coins>("SELECT IdCoin, Name, Description, Active FROM Coins");
 
             return data;
+        }
+
+        public async Task<int> Add(AddCoinsSignature entity)
+        {
+            using var connection = new SqlConnection(_connectionString);
+
+            var query = "INSERT INTO Coins (Name, Description, Active) " +
+                        "VALUES (@Name, @Description, @Active)";
+
+            var result = await connection.ExecuteAsync(query, entity);
+
+            return result;
         }
 
         public async Task<int> Add(Coins entity)

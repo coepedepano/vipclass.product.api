@@ -23,7 +23,10 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryAsync<Courses>("SELECT * FROM Courses");
+            var data = await connection.QueryAsync<Courses>("SELECT Courses.IdCourse, Courses.IdCategorie, Courses.Title, Courses.Description, Courses.Price, Courses.Active " +
+                                                            "FROM Courses " +
+                                                            "JOIN Producer ON Producer.IdCourse = Courses.IdCourse " +
+                                                            "LEFT JOIN CoProducer ON CoProducer.IdCourse = Courses.IdCourse ");
 
             return data;
         }
@@ -42,9 +45,11 @@ namespace vipclass.products.Repository
         {
             using var connection = new SqlConnection(_connectionString);
 
-            var data = await connection.QueryFirstOrDefaultAsync<Courses>("SELECT Title, Description, Royalts, PutOnMarketPlace, Active " +
-                                                                    "FROM Courses " +
-                                                                    "WHERE IdCourse = @Id", new { Id = id });
+            var data = await connection.QueryFirstOrDefaultAsync<Courses>("SELECT Courses.IdCourse, Courses.IdCategorie, Courses.Title, Courses.Description, Courses.Price, Courses.Active " +
+                                                                            " FROM Courses " +
+                                                                            " JOIN Producer ON Producer.IdCourse = Courses.IdCourse" +
+                                                                            " LEFT JOIN CoProducer ON CoProducer.IdCourse = Courses.IdCourse " +
+                                                                            " WHERE Courses.IdCourse = @Id", new { Id = id });
 
             return data;
         }
